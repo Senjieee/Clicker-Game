@@ -38,5 +38,6 @@ void introClicks() {
     mode = options;
   }
   if (mouseX > 300 && mouseX < 500 && mouseY > 600 && mouseY < 650) {
+    exit();
   }
 }

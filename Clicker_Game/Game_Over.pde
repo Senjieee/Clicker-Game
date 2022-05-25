@@ -38,4 +38,7 @@ void gameOverClicks() {
     vx = random(-5, 5);
     vy = random(-5, 5);
   }
+  if (mouseX > 300 && mouseX < 500 && mouseY > 650 && mouseY < 700) {
+    exit();
+  }
 }

@@ -13,6 +13,17 @@ color grey = color(59, 53, 54);
 color black = color(0);
 color white = color(255);
 color glow = color(238, 245, 153);
+color tactile = color(209, 199, 107);
+
+color selectedColorRed; 
+color selectedColorBlue;
+color selectedColorYellow;
+color selectedColorGreen;
+color selectedColorOrange;
+color selectedColorPurple;
+color selectedColorBlack;
+color selectedColorWhite;
+color sliderSelect;
 
 color startSelect;
 color optionsSelect;
@@ -30,6 +41,8 @@ float x, y, d;
 float vx, vy;
 float x2, y2;
 float vx2, vy2;
+
+float sliderX;
 
 int mode;
 final int intro = 0;
@@ -57,6 +70,7 @@ void setup() {
   score = 0;
   lives = 3;
   highscore = 0;
+  sliderX = 300;
 }
 
 void draw() {
@@ -128,5 +142,66 @@ void draw() {
   }
   if (score > highscore) {
     highscore = score;
+  }
+  if (dist(sliderX, 500, mouseX, mouseY) < 25) {
+    sliderSelect = glow;
+  } else {
+    sliderSelect = black;
+  }
+  if (ball == red) {
+    selectedColorRed = glow;
+  } else if (dist(90, 400, mouseX, mouseY) < 25) {
+    selectedColorRed = tactile;
+  } else {
+    selectedColorRed = black;
+  }
+  if (ball == blue) {
+    selectedColorBlue = glow;
+  } else if (dist(180, 400, mouseX, mouseY) < 25) {
+    selectedColorBlue = tactile;
+  } else {
+    selectedColorBlue = black;
+  }
+  if (ball == yellow) {
+    selectedColorYellow = glow;
+  } else if (dist(270, 400, mouseX, mouseY) < 25) {
+    selectedColorYellow = tactile;
+  } else {
+    selectedColorYellow = black;
+  }
+  if (ball == green) {
+    selectedColorGreen = glow;
+  } else if (dist(360, 400, mouseX, mouseY) < 25) {
+    selectedColorGreen = tactile;
+  } else {
+    selectedColorGreen = black;
+  }
+  if (ball == orange) {
+    selectedColorOrange = glow;
+  } else if (dist(450, 400, mouseX, mouseY) < 25) {
+    selectedColorOrange = tactile;
+  } else {
+    selectedColorOrange = black;
+  }
+  if (ball == purple) {
+    selectedColorPurple = glow;
+  } else if (dist(540, 400, mouseX, mouseY) < 25) {
+    selectedColorPurple = tactile;
+  } else {
+    selectedColorPurple = black;
+  }
+  if (ball == black) {
+    selectedColorBlack = glow;
+  } else if (dist(630, 400, mouseX, mouseY) < 25) {
+    selectedColorBlack = tactile;
+  } else {
+    selectedColorBlack = black;
+  }
+  if (ball == white) {
+    selectedColorWhite = glow;
+  } else if (dist(720, 400, mouseX, mouseY) < 25) {
+    selectedColorWhite = tactile;
+  } else {
+    selectedColorWhite = black;
   }
 }
