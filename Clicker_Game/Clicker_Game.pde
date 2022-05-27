@@ -70,7 +70,7 @@ void setup() {
   score = 0;
   lives = 3;
   highscore = 0;
-  sliderX = 300;
+  sliderX = 200;
 }
 
 void draw() {

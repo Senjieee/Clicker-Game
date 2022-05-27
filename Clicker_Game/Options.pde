@@ -76,7 +76,7 @@ void optionsClicks() {
     if (mouseX > 190 && mouseX < 610 && mouseY > 480 && mouseY < 520) {
       sliderX = mouseX;
     }
-    d = map(sliderX, 200, 600, 20, 200);
+    d = map(sliderX, 200, 600, 100, 200);
   }
 }
 
@@ -85,6 +85,6 @@ void mouseDragged() {
     if (mouseX > 190 && mouseX < 610 && mouseY > 480 && mouseY < 520) {
       sliderX = mouseX;
     }
-    d = map(sliderX, 200, 600, 20, 200);
+    d = map(sliderX, 200, 600, 100, 200);
   }
 }
